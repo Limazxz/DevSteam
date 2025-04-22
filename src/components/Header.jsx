@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className="w-100 navbar navbar-dark bg-dark gap-5 w-50 justify-content-between justify-content-around   ">
       <div id="info" className="d-flex w-50 gap-5">
@@ -15,8 +15,19 @@ const Header = () => {
         />
       </div>
 
-      <div id="carrinho" role="button">
+      <div
+        id="carrinho"
+        role="button"
+        className="position-relative d-flex align-items-center gap-3"
+      >
         <i className="bi bi-cart4 text-light fs-2"></i>
+
+        {props.contadorJogos > 0 && (
+          <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {props.contadorJogos}
+            <span className="visually-hidden">Jogos no carrinho</span>
+          </span>
+        )}
       </div>
     </header>
   );
