@@ -4,8 +4,7 @@ function App() {
 
   return (
     <>
-      <div>
-      </div>
+      <h1>Welcome to DevStem</h1>
     </>
   )
 }
