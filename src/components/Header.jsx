@@ -11,7 +11,7 @@ const Header = () => {
         <input
           type="text"
           placeholder="Buscar"
-          className="w-100 bg-secondary-subtle d-none d-md-block border-0 rounded-3 buscar px-4 my-2 ms-5"
+          className="w-100  d-none d-md-block border-0 rounded-3 buscar px-4 my-2 ms-5"
         />
       </div>
 
