@@ -1,16 +1,21 @@
-import React from 'react'
-import PromoCard from './PromoCard'
+import React from "react";
+import PromoCard from "./PromoCard";
 
 const Promotion = () => {
   return (
-    <div id='promotion'>
-        <h2>Promoções</h2>
-        <div id='itensPromo'>
-            {/* inserir os card de promoção */}
-            <PromoCard />
-        </div>
+    <div id="promotion">
+      <h2>Promoções</h2>
+      <div
+        id="itensPromo"
+        className="d-flex flex-wrap justify-content-around gap-4"
+      >
+        {/* inserir os card de promoção */}
+        <PromoCard />
+        <PromoCard />
+        <PromoCard />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Promotion
+export default Promotion;
