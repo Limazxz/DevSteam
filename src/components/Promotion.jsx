@@ -78,17 +78,18 @@ const Promotion = () => {
       >
         {/* mapeando um array com react */}
         {games
-        .slice(0, 4) // Limita a exibição a apenas 3 jogos
-        .filter((jogo) => jogo.desconto > 0) // Filtra os jogos com desconto
-        .map((jogo) => (
-          <PromoCard
-            key={jogo.id}
-            titulo={jogo.titulo}
-            preco={jogo.preco.toFixed(2)}
-            desconto={jogo.desconto}
-            imagem={jogo.imagem}
-          />
-        ))}
+          .filter((jogo) => jogo.desconto > 0) // Filtra os jogos com desconto
+          .sort(() => Math.random() - 0.5) // Embaralha os jogos
+          .slice(0, Math.min(3, games.filter((jogo) => jogo.desconto > 0).length)) // Limita a exibição a no máximo 3 jogos
+          .map((jogo) => (
+            <PromoCard
+              key={jogo.id}
+              titulo={jogo.titulo}
+              preco={jogo.preco.toFixed(2)}
+              desconto={jogo.desconto}
+              imagem={jogo.imagem}
+            />
+          ))}
       </div>
     </div>
   );
