@@ -4,25 +4,16 @@ import Header from "./components/Header";
 import Promotion from "./components/Promotion";
 
 function App() {
-  const [carrinhoItem, setCarrinhoItem] = useState([]);
-  const [carrinhoTotal, setCarrinhoTotal] = useState(false);
+const [contador, setContador]= useState(3);
 
-  const adicionarCarrinho = (item) => {
-    setCarrinhoItem((itensAnteriores) => [...itensAnteriores, item]);
-    const existing = carrinhoItem.find((i) => i.id === item.id);
-    if (existing) {
-      setCarrinhoTotal(
-        (total) => total + item.preco - (item.preco * item.desconto) / 100
-      );
-    } else {
-      setCarrinhoTotal((total) => total + item.preco);
-    }
-  };
+const handleAddCarrinho = () => {
+  setContador(contador + 1);
+}
 
   return (
     <>
-      <Header contadorJogos={2} />
-      <Promotion adicionarCarrinho={adicionarCarrinho} />
+      <Header contadorJogos={contador} />
+      <Promotion onAddCarrinho={handleAddCarrinho}/>
     </>
   );
 }
