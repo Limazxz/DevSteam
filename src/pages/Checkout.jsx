@@ -34,16 +34,16 @@ const Checkout = () => {
             {carrinho.map((item) => (
               <li
                 key={item.id}
-                className="list-group-item bg-secondary-subtle text-dark border-0 d-flex justify-content-between align-items-center"
+                className="list-group-item bg-secondary-subtitle text-dark border-0 d-flex justify-content-between align-items-center"
               >
                 <div>
                   <h6 className="my-0">{item.titulo}</h6>
                   <small>Qtd: {item.quantidade}</small>
                 </div>
-                <span className="text-decoration-line-through">
+                <span className=" text-danger text-decoration-line-through">
                   R$ {item.preco.toFixed(2)}
                 </span>
-                <span>
+                <span className="fw-bold text-success">
                   R${" "}
                   {(item.preco - (item.preco * item.desconto) / 100).toFixed(2)}
                 </span>
