@@ -10,7 +10,7 @@ const CarrinhoOffCanvas = (props) => {
   return (
     <div
       id="carrinhoOffCanvas"
-      className="offcanvas offcanvas-end show"
+      className="offcanvas offcanvas-end"
       style={{ background: "#364A63" }}
     >
       <div
@@ -94,7 +94,11 @@ const CarrinhoOffCanvas = (props) => {
               <strong>R$ {total.toFixed(2)}</strong>
             </div>
             <button
-              className="btn btn-success w-100 mt-2">Finalizar Compra</button>
+              id="addCarrinho"
+              className="btn btn-success desconto w-100 mt-2 fs-5 border-0"
+            >
+              Finalizar Compra
+            </button>
           </>
         )}
       </div>
