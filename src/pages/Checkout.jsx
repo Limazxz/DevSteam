@@ -34,7 +34,7 @@ const Checkout = () => {
             {carrinho.map((item) => (
               <li
                 key={item.id}
-                className="list-group-item d-flex justify-content-between align-items-center"
+                className="list-group-item bg-secondary-subtle text-dark border-0 d-flex justify-content-between align-items-center"
               >
                 <div>
                   <h6 className="my-0">{item.titulo}</h6>
